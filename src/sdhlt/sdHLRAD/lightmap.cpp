@@ -4512,7 +4512,7 @@ void MLH_GetSamples_r (mdllight_t *ml, int nodenum, const float *start, const fl
 			dface_t *f = &g_dfaces[node->firstface + i];
 			texinfo_t *tex = &g_texinfo[f->texinfo];
 			const char *texname = GetTextureByNumber (f->texinfo);
-			if (!strncmp (texname, "sky", 3))
+			if (!strncasecmp (texname, "sky", 3))
 			{
 				continue;
 			}

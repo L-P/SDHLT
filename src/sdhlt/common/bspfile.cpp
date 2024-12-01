@@ -861,7 +861,7 @@ int CountBlocks ()
 	{
 		dface_t *f = &g_dfaces[k];
 		const char *texname =  GetTextureByNumber (ParseTexinfoForFace (f));
-		if (!strncmp (texname, "sky", 3) //sky, no lightmap allocation.
+		if (!strncasecmp (texname, "sky", 3) //sky, no lightmap allocation.
 			|| !strncmp (texname, "!", 1) || !strncasecmp (texname, "water", 5) || !strncasecmp (texname, "laser", 5) //water, no lightmap allocation.
 			|| (g_texinfo[ParseTexinfoForFace (f)].flags & TEX_SPECIAL) //aaatrigger, I don't know.
 			)
